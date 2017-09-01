@@ -3,14 +3,13 @@
 
 namespace x4 {
     namespace mrph {
-
 // In order to provide your class (assume it encapsulates two fields, x and y)
 // with all the comp. operators implement the == and < operators  in your class, e.g:
-//   friend inline bool operator == (YourClass const& lhs,
-//                                   YourClass const& rhs)
-//   { return std::tie(lhs.x, lhs.y) == std::tie(rhs.x, rhs.y); }
+//     friend inline bool operator == (YourClass const& lhs,
+//                                     YourClass const& rhs)
+//     { return std::tie(lhs.x, lhs.y) == std::tie(rhs.x, rhs.y); }
 // and inherit it this way:
-//   class YourClass : x4::intf::Comparable<YourClass>
+//     class YourClass : x4::intf::Comparable<YourClass> { ... }
         template <typename T>
         struct Comparable {
             friend inline bool
