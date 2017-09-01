@@ -28,15 +28,15 @@ namespace x4 {
             friend inline bool
             operator != (T const& lhs, T const& rhs) noexcept
             { return !(lhs == rhs); }
-        };
+        }; /// Comparable
 
         template <typename T>
         struct LazyComparable : public Comparable<T> {
             friend inline bool
             operator == (T const& lhs, T const& rhs) noexcept
             { return  !(lhs > rhs) && !(lhs < rhs); }
-        };
-    }
-}
+        }; /// LazyComparable
+    } /// mrph
+} /// x4
 
 #endif /// X4_MRPH_STATIC_POLYMORPHISM_HEADER_GUARD
